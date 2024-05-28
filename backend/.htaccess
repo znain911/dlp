@@ -1,0 +1,8 @@
+SetEnvIf Referer https://education.dldchc-badas.org.bd internal
+SetEnvIf Referer http://localhost/dlp/ internal
+#
+<Files *>
+order Deny,Allow
+Deny from all
+Allow from env=internal
+</Files>
